@@ -23,10 +23,9 @@ class _BottomNavigator_custom3State extends State<BottomNavigator_custom3> {
       tabController = CupertinoTabController(initialIndex: widget.indexpage);
       print(tabController);
       print(tabController.runtimeType);
+      
     });
   }
-
-
 
   @override
   Widget build(BuildContext context) {
