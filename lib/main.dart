@@ -39,8 +39,9 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     super.initState();
     startTimer();
-
   }
+
+  //99:B9:AB:C2:41:60:AF:C8:40:07:8A:AA:76:18:1D:22:B3:DE:08:F1
 
   void startTimer() async{
     await Future.delayed(Duration(seconds: 3));
@@ -49,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
         .pushAndRemoveUntil(
         MaterialPageRoute(
             builder: (context) => BottomNavigator_custom3(
-                indexpage: 4)
+                indexpage: 1)
         ),
             (Route<dynamic> route) => false);
 

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:second_project/confix/Colors_custom.dart';
+import 'package:second_project/ui/CreditLimit/CreditLimit_Page.dart';
 import 'package:second_project/ui/Profile/Profile_page.dart';
 import 'package:second_project/ui/Profile/Seemor_page.dart';
 
@@ -23,7 +24,7 @@ class _BottomNavigator_custom3State extends State<BottomNavigator_custom3> {
       tabController = CupertinoTabController(initialIndex: widget.indexpage);
       print(tabController);
       print(tabController.runtimeType);
-      
+
     });
   }
 
@@ -71,7 +72,7 @@ class _BottomNavigator_custom3State extends State<BottomNavigator_custom3> {
               case 1:
                 return CupertinoTabView(
                   builder: (BuildContext context) {
-                    return Text("test");
+                    return CreditLimitPage();
                   },
                 );
                 break;
