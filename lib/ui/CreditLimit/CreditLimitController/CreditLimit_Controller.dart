@@ -17,6 +17,8 @@ class test_controller{
       }
       else{
         print("statuscode error");
+        return "statuscode error";
+
       }
     }
     catch(e){

@@ -15,7 +15,8 @@ class CreditLimitPage extends StatefulWidget {
 }
 
 class _CreditLimitPageState extends State<CreditLimitPage> {
-  ServiceModel dataCredit = new ServiceModel();
+  // ServiceModel dataCredit = new ServiceModel();
+  var dataCredit;
   bool checkLoaded = true;
 
   @override
@@ -23,12 +24,20 @@ class _CreditLimitPageState extends State<CreditLimitPage> {
     super.initState();
     getDataCreditLimit();
   }
+
   Future<dynamic> getDataCreditLimit() async{
     dataCredit = await test_controller.testDemoAvatar_Controller();
-    await Future.delayed(Duration(seconds: 2));
-    setState(() {
-      checkLoaded = false;
-    });
+    if (dataCredit == 'statuscode error') {
+      print('******************************');
+      print(dataCredit);
+      print('******************************');
+    }
+    else{
+      await Future.delayed(Duration(seconds: 2));
+      setState(() {
+        checkLoaded = false;
+      });
+    }
   }
 
 

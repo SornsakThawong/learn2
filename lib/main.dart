@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:second_project/confix/BottomNavigator_custom.dart';
 import 'package:second_project/confix/Colors_custom.dart';
+import 'package:second_project/ui/Chat/Chat_page.dart';
 import 'package:second_project/ui/Profile/Profile_page.dart';
 
 void main() {
@@ -44,13 +45,19 @@ class _MyHomePageState extends State<MyHomePage> {
   //99:B9:AB:C2:41:60:AF:C8:40:07:8A:AA:76:18:1D:22:B3:DE:08:F1
 
   void startTimer() async{
-    await Future.delayed(Duration(seconds: 3));
+    await Future.delayed(Duration(seconds: 1));
+
+    // Navigator.of(context)
+    //     .pushAndRemoveUntil(
+    //     MaterialPageRoute(
+    //         builder: (context) => BottomNavigator_custom3(indexpage: 2)
+    //     ),
+    //         (Route<dynamic> route) => false);
 
     Navigator.of(context)
         .pushAndRemoveUntil(
         MaterialPageRoute(
-            builder: (context) => BottomNavigator_custom3(
-                indexpage: 1)
+            builder: (context) => ChatPage()
         ),
             (Route<dynamic> route) => false);
 
